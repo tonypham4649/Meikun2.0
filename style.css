@@ -1,8 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
 body {
     min-height:100%;
-    background-image:  url('imgs/wallpaper.jpg');
-    font-family: 'Lora';
+    font-family: sans-serif;
     color: azure;
+    margin: 0;
 }
 
 a, a:visited {
@@ -10,16 +18,30 @@ a, a:visited {
     color: inherit;
 }
 
+#hero {
+    min-height: 1000px;
+    background-image:  url('./imgs/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0 15%;
-    margin-top: 1%;
+    padding: 1% 15%;
+    
 }
 
-.nav-bar  a {
-    margin: 25px;
+.nav-bar {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-bar > a {
+    margin: 20px;
+    width: 130px;
 }
 
 .nav-bar a:hover {
@@ -30,5 +52,76 @@ header {
 }
 
 .main-logo {
-    max-width: 90%;
+    /* width: 200px; */
+    max-width: 200px;
+}
+
+.page-1 {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+}
+
+.page-1 > img {
+    display: block;
+    margin-top: 50px;
+    width: 30%;
+}
+
+.page-1 > p {
+    max-width: 500px;
+    font-size: 20px;
+    color: antiquewhite;
+  }
+
+.page-1 > div {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.page-1 button {
+    padding: 10px 40px;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(36, 189, 44);
+    border: none;
+}
+
+#about {
+    background-image: url('./imgs/wall-yogurt.jpg');
+    color: antiquewhite;
+    height: 800px;
+}
+
+#about * {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-size: cover;
+}
+
+#about > h1 {
+    width: 100%;
+    height: 100%;
+}
+
+#about > p {
+    padding-top: 200px;
+}
+
+#products {
+    min-height: 1000px;
+    background-image:  url('./imgs/wall-black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 30px;
+}
+
+.menu-items {
+    text-align: center;
 }
