@@ -111,17 +111,48 @@ header {
     padding-top: 200px;
 }
 
-#products {
-    min-height: 1000px;
-    background-image:  url('./imgs/wall-black.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+#menu {
+    color: black;
     padding: 50px 100px;
+}
+#sidebar-menu {
+    float: left;
+    font-size: 30px;
+    font-weight: 100;
+    color: black;
+    padding-left: 200px;
+}
+#sidebar-menu > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar-menu button {
+    width: 100px;
+    height: 30px;
+}
+
+#products {
+    float: right;
+    min-height: 1000px;
+    /* background-image:  url('./imgs/wall-black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-row-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px ;
+    grid-row-gap: 20px;
+    border-left: 2px solid rgb(197, 193, 193);
+    padding: 0 5rem;
 }
 
 .menu-items {
     text-align: center;
+    color: black;
+}
+.menu-items > img {
+    box-shadow: 0px 0px 8px 1px gray;
+    border-radius: 15px;
+    width: 80%;
 }
