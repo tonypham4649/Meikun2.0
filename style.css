@@ -91,29 +91,34 @@ header {
 }
 
 #about {
-    background-image: url('./imgs/wall-yogurt.jpg');
-    color: antiquewhite;
-    height: 800px;
-}
-
-#about * {
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background: url('./imgs/wall-black.jpg') rgba(0, 0, 0, 0.7);
     background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 800px;
+    padding: 5rem 15rem;
 }
 
-#about > h1 {
-    width: 100%;
+#about p {
+    color: rgb(238, 223, 202);
+    font-size: 1.5rem;
+    font-style: italic;
+    float: right;
+    width: 50%;
+}
+
+#about img {
+    text-align: center;
     height: 100%;
-}
-
-#about > p {
-    padding-top: 200px;
 }
 
 #menu {
     color: black;
     padding: 50px 100px;
+    height: 80rem;
+    background-color: rgb(224, 222, 218);
 }
 #sidebar-menu {
     float: left;
@@ -128,17 +133,26 @@ header {
     padding: 0;
 }
 
-#sidebar-menu button {
+#sidebar-menu a {
     width: 100px;
     height: 30px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1rem;
+}
+
+#sidebar-menu a:hover {
+    cursor: pointer;
+}
+
+#sidebar-menu .active {
+    color: rgb(36, 189, 44);
+    font-size: 1.4rem;
 }
 
 #products {
     float: right;
-    min-height: 1000px;
-    /* background-image:  url('./imgs/wall-black.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; */
+    min-height: 75rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px ;
@@ -155,4 +169,9 @@ header {
     box-shadow: 0px 0px 8px 1px gray;
     border-radius: 15px;
     width: 80%;
+}
+
+#feedback {
+    height: 800px;
+    background-color: aqua;
 }

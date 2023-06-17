@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="./style.css">
     <script defer src="./script/script.js"></script>
     <title>Meikun</title>
-    <style>
-        
-    </style>
 </head>
 <body>
     <div id="hero">
@@ -33,22 +30,26 @@
         </section>
     </div>
 
-    <!-- <div id="about">
-        <p>Hãy tưởng tượng sự kết hợp độc đáo và thơm ngon giữa vị sữa chua tươi mát và lớp phô mai mềm mại, béo ngậy, đến từ sản phẩm sữa chua phô mai nhà làm của chúng tôi. Mỗi hũ sữa chua là sự kết hợp hoàn hảo giữa công thức truyền thống và nguyên liệu tươi mới nhất, không chất bảo quản, giúp mang đến cho bạn cảm giác thưởng thức đầy ấn tượng và không thể nào quên.<br><br>Với lớp phô mai mịn màng, đặc sắc bao bọc bên ngoài, cùng với lớp sữa chua dẻo dai, chua nhẹ bên trong, sẽ tạo nên một trải nghiệm ẩm thực không thể cưỡng lại. Sữa chua phô mai nhà làm của chúng tôi không chỉ tốt cho sức khỏe, đáp ứng nhu cầu dinh dưỡng của bạn mà còn là món tráng miệng lý tưởng dành cho mọi lứa tuổi. Hãy thưởng thức và cảm nhận hương vị tuyệt vời từ sản phẩm của chúng tôi!</p>
-    </div> -->
+    <section id="about">
+        <img src="imgs/making.png" alt="making-yogurt">
+        <p>Hãy tưởng tượng sự kết hợp độc đáo và thơm ngon giữa vị sữa chua tươi mát và lớp phô mai mềm mại, béo ngậy, đến từ sản phẩm sữa chua phô mai nhà làm của chúng tôi.<br><br>Với lớp phô mai mịn màng, đặc sắc bao bọc bên ngoài, sữa chua nhẹ bên trong, sẽ tạo nên một trải nghiệm ẩm thực không thể cưỡng lại. Sữa chua phô mai nhà làm của chúng tôi không chỉ tốt cho sức khỏe, đáp ứng nhu cầu dinh dưỡng của bạn mà còn là món tráng miệng lý tưởng dành cho mọi lứa tuổi.</p>
+    </section>
+
     <section id="menu">
         <div id="sidebar-menu">
             <ul>
-                <li><button onclick="filterSelection('all')">Tất cả</button></li>
-                <li><button onclick="filterSelection('yogurt')">Sữa chua</button></li>
-                <li><button onclick="filterSelection('jelly')">Rau câu</button></li>
-                <li><button onclick="filterSelection('pudding')">Bánh flan</button></li>
-                <li><button onclick="filterSelection('tofu')">Tàu hũ</button></li>
-                <li><button onclick="filterSelection('milk')">Sữa</button></li>
+                <li><a onclick="filterSelection('all')" class="filter active">Tất cả</a></li>
+                <li><a onclick="filterSelection('yogurt')" class="filter">Sữa chua</a></li>
+                <li><a onclick="filterSelection('jelly')" class="filter">Rau câu</a></li>
+                <li><a onclick="filterSelection('pudding')" class="filter">Bánh flan</a></li>
+                <li><a onclick="filterSelection('tofu')" class="filter">Tàu hũ</a></li>
+                <li><a onclick="filterSelection('milk')" class="filter">Sữa</a></li>
             </ul>
         </div>
-        <div id="products">
-        </div>
+        <div id="products"></div>
+    </section>
+
+    <section id="feedback">
     </section>
 </body>
 </html>

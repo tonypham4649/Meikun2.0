@@ -55,13 +55,6 @@ let inventory = [
       },
 ];
 
-// inventory.sort(function(a, b) {
-// if (a.name.toLowerCase() < b.name.toLowerCase()) {return -1}
-// if (a.name.toLowerCase() > b.name.toLowerCase()) {return 1}
-// return 0}
-// )
-
-
 // create list of products
 const products = document.getElementById('products')
 for (let i = 0; i < inventory.length; i++) {
@@ -91,8 +84,41 @@ for (let i = 0; i < inventory.length; i++) {
 
     products.appendChild(newDiv)
 }
-  
-  
+
+function hideEle(ele) {
+    ele.style.display = 'none'
+}
+
+function showEle(ele) {
+    ele.style.removeProperty('display')
+}
+
+const myFilter = document.getElementsByClassName('filter')
+for (i = 0; i < myFilter.length; i++) {
+    myFilter[i].addEventListener('click', function() {
+        for (e = 0; e < myFilter.length; e++) {
+            myFilter[e].classList.remove('active')
+        }
+        this.classList.add('active')
+        })
+    }
+        
+function filterSelection(myType) {
+    const itemsList = document.getElementsByClassName('menu-items')
+    const myItemList = Array.from(itemsList)
+    myItemList.map(hideEle)
+    
+    if (myType == 'all') {
+        myItemList.map(showEle)
+    }
+    else {
+        for (i = 0; i < myItemList.length; i++) {
+            if (myItemList[i].lastChild.innerHTML == myType) {
+                showEle(myItemList[i])
+            }
+        }
+    }
+}
 //   const sortEle = document.getElementById('sort-by')
 //   const sortByName = function(a, b) {
 //     let nameA = a.getElementsByClassName("title")[0].innerText.toLowerCase()
