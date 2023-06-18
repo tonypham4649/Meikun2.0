@@ -279,9 +279,55 @@ header {
 }
 
 footer {
-    height: 150px;
-    /* background-color: rgb(49, 48, 48); */
+    height: 200px;
+    /* background-color: aqua; */
+    background-color: rgb(32, 32, 32);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5rem;
+}
 
+footer * {
+    color:rgb(238, 223, 202);
+}
+
+footer h2 {
+    color:rgb(255, 255, 255);
+}
+
+.partners {
+    text-align: center;
+}
+
+.partners img {
+    width: 15%;
+    border-radius: 15px;
+    margin-left: 1.5rem;
+}
+
+.socialnetworks input {
+    height: 2.5rem;
+}
+
+.socialnetworks input[type=submit] {
+    background-color: rgb(197,118,0);
+    border: 0;
+    padding: 0 1rem;
+}
+
+
+.sns {
+    margin-top: 1rem;
+}
+
+.sns * {
+    margin-right: 1rem;
+}
+
+.sns .fa {
+    padding: 0.5rem;
+    font-size: 30px;
+    width: 2rem;
+    text-align: center;
+    text-decoration: none;
 }
