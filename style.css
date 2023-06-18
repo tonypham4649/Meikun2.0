@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    color:rgb(238, 223, 202);
 }
 
 body::-webkit-scrollbar {
@@ -163,8 +164,12 @@ header {
 
 .menu-items {
     text-align: center;
+}
+
+.menu-items * {
     color: black;
 }
+
 .menu-items > img {
     box-shadow: 0px 0px 8px 1px gray;
     border-radius: 15px;
@@ -172,6 +177,111 @@ header {
 }
 
 #feedback {
-    height: 800px;
-    background-color: aqua;
+    height: 600px;
+    color: black;
+    position: relative;
+}
+
+.comments {
+    background-color: rgb(238, 223, 202) ;
+    border-radius: 50px;
+    position: absolute;
+    float: left;
+    left: 15%;
+    top: 20%;
+    padding: 3rem;
+}
+
+.comments h2, p {
+    color: black;
+}
+
+.comments p {
+    font-size: larger;
+}
+
+.comments img {
+    width: 20%;
+    border-radius: 50%;
+    margin-left: 2rem ;
+}
+
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    float: right;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 3px 3px;
+    transition: 0.6s ease;
+    border: 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.432);
+}
+  
+  /* The bars */
+.feedback-bar {
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    transform: translateX(-50%);
+}
+
+
+.bar {
+    cursor: pointer;
+    height: 2px;
+    width: 30px;
+    margin: 0 2px;
+    background-color: #ffffff;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.bar:hover {
+    height: 5px;
+    background-color: rgb(36, 189, 44);;
+    transition: 0.6s ease;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+footer {
+    height: 150px;
+    /* background-color: rgb(49, 48, 48); */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
 }

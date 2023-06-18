@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script defer src="./script/script.js"></script>
+    <script defer src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <title>Meikun</title>
 </head>
 <body>
@@ -50,6 +51,50 @@
     </section>
 
     <section id="feedback">
+        <div class="comments">
+            <h2>HOMEMADE <br> Like Mother's Love</h2>
+            <p>Là cảm nhận chung của khách hàng <br> sau khi dùng thử sữa chua của chúng tôi.</p>
+            <img src="imgs/smile.png" alt="smile">
+            <img src="imgs/smile2.png" alt="smile2">
+        </div>
+
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="imgs/feedback01.jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="imgs/feedback02.jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="imgs/feedback03.jpg" style="width:100%">
+            </div>
+        
+            <button class="prev" onclick="plusSlides(-1)">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.0466 18.3333H33.3333V21.6666H13.0466L21.9866 30.6066L19.63 32.9633L6.66663 20L19.63 7.03662L21.9866 9.39329L13.0466 18.3333Z" fill="white"></path> </svg>
+            </button>
+            <button class="next" onclick="plusSlides(1)">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M26.9534 18.3333L18.0134 9.39329L20.3701 7.03662L33.3334 20L20.3701 32.9633L18.0134 30.6066L26.9534 21.6666H6.66675V18.3333H26.9534Z" fill="white"></path> </svg>
+            </button>
+
+            <div class="feedback-bar">
+                <span class="bar" onclick="currentSlide(1)"></span>
+                <span class="bar" onclick="currentSlide(2)"></span>
+                <span class="bar" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
     </section>
+
+    <footer>
+        <div class="signatures">
+
+        </div>
+        <div id="map"></div>
+        <div class="logos">
+
+        </div>
+    </footer>
 </body>
 </html>

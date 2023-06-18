@@ -119,103 +119,55 @@ function filterSelection(myType) {
         }
     }
 }
-//   const sortEle = document.getElementById('sort-by')
-//   const sortByName = function(a, b) {
-//     let nameA = a.getElementsByClassName("title")[0].innerText.toLowerCase()
-//     let nameB = b.getElementsByClassName("title")[0].innerText.toLowerCase()
-    
-//     if (nameA < nameB) return -1
-//     if (nameA > nameB) return 1
-//     return 0
-//   }
-  
-//   const sortByPrice = function(a, b) {
-//     let priceA = Number(a.getElementsByClassName("price")[0].innerText)
-//     let priceB = Number(b.getElementsByClassName("price")[0].innerText)
-    
-//     if (priceA < priceB) return -1
-//     if (priceA > priceB) return 1
-//     return 0
-//   }
-  
-//   sortEle.addEventListener('change', function() {
-//     const value = sortEle.value
-//     var list = document.getElementsByClassName('item')
-//     list = Array.from(list)
-  
-//     if (value == 'sort by name') {
-//       list.sort(sortByName)
-//     }
-//     if (value == 'sort by price') {
-//       list.sort(sortByPrice)
-//     }
-  
-//     for (let i = 0; i < list.length; i++) {
-//       list[i].parentElement.appendChild(list[i])
-//     }
-//   })
-  
-//   const color = document.getElementsByClassName('color')
-//   const header = document.getElementsByTagName('header')[0]
-  
-//   for (let i = 0; i < color.length; i++) {
-//     color[i].addEventListener('click', function() {
-//       header.style.backgroundImage = 'none'
-//       header.setAttribute('id', color[i].id)
-//     })
-  
-//     if (color[i].id == 'gradient') {
-//       color[i].addEventListener('click', function() {
-//         header.style.backgroundImage = 'linear-gradient(to right, #fcbf16, #992154)'
-//       })
-//     }
-//   }
-  
-//   const filter = document.getElementById('apply-price-filter')
-//   const itemList = document.getElementsByClassName('item')
-  
-//   filter.addEventListener('click', function() {
-//     const titleList = document.getElementsByClassName('title')
-//     const priceList = document.getElementsByClassName('price')
-    
-//     const search = document.getElementById('search').value.toLowerCase()
-    
-//     const minPrice = Number(document.getElementById('min-price').value)
-//     const maxPrice = Number(document.getElementById('max-price').value)
-   
-  
-//     if (search != '') {
-//       for (let i = 0; i < titleList.length; i++) {
-//         if (!titleList[i].innerHTML.toLowerCase().includes(search)) {
-//           titleList[i].parentElement.style.display = 'none'
-//         }
-//       }
-//     }
-//     else {
-//       for (let i = 0; i < titleList.length; i++) {
-//         titleList[i].parentElement.style.removeProperty('display')
-//       }
-//     }
-     
-//     if (minPrice == 0 && maxPrice == 0) {
-//       for (let i = 0; i < priceList.length; i++) {
-//         priceList[i].parentElement.style.removeProperty('display')
-//       }
-//     }
-//     else if (minPrice <= maxPrice && minPrice >= 0) {
-//       for (let i = 0; i < priceList.length; i++) {
-//         let bookPrice = Number(priceList[i].innerHTML)
-//         if (bookPrice < minPrice || bookPrice > maxPrice) {
-//           priceList[i].parentElement.style.display = 'none'
-//         }
-//       }
-//     }  
-  
-//     else {
-//               proEle.parentElement.style.display = 'none'}
-//             })
-//         }
-//       })
-//     }
-//   })
-  
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+
+// Initialize and add the map
+let map;
+
+async function initMap() {
+  // The location of Uluru
+  const position = { lat: -25.344, lng: 131.031 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map"), {
+    zoom: 4,
+    center: position,
+    mapId: "DEMO_MAP_ID",
+  });
+
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: position,
+    title: "Uluru",
+  });
+}
+
+initMap();
