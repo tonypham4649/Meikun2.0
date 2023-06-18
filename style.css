@@ -309,12 +309,16 @@ footer h2 {
     height: 2.5rem;
 }
 
-.socialnetworks input[type=submit] {
+input[type=submit] {
     background-color: rgb(197,118,0);
     border: 0;
     padding: 0 1rem;
+    cursor: pointer;
 }
 
+input[type=submit]:active {
+    transform: translateY(1px);
+}
 
 .sns {
     margin-top: 1rem;
