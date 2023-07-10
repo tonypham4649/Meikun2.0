@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500&display=swap');
+
+// * {
+//     box-sizing: border-box;
+//     color:rgb(238, 223, 202);
+//     font-family: 'Be Vietnam Pro', sans-serif;
+// }
+
+body {
+    min-height:100%;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color:rgb(238, 223, 202);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin: 0;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+#hero {
+    min-height: 55rem;
+    background-image:  url('./imgs/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+    header {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1% 15%;
+
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            a {
+                margin: 20px;
+                width: 130px;
+
+                &:hover {
+                    text-decoration: underline;
+                    text-underline-offset: 10px;
+                    text-decoration-color: green;
+                    text-decoration-thickness: 2px;
+                }
+            }
+
+            .main-logo {
+                max-width: 200px;
+            }
+        }
+    }
+    .page-1 {
+        margin-top: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+
+        img {
+            display: block;
+            margin-top: 50px;
+            width: 30%;
+        }
+
+        p {
+            max-width: 500px;
+            font-size: 20px;
+            color: antiquewhite;
+        }
+
+        div {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+        }
+
+        button {
+            padding: 10px 40px;
+            border-radius: 20px;
+            color: white;
+            font-size: 20px;
+            background-color: rgb(36, 189, 44);
+            border: none;
+        }
+    }
+}
+
+#about {
+    background: url('./imgs/wall-black.jpg') rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 800px;
+    padding: 5rem 15rem;
+
+    p {
+        color: rgb(238, 223, 202);
+        font-size: 1.5rem;
+        font-style: italic;
+        float: right;
+        width: 50%;
+    }
+
+    img {
+        text-align: center;
+        max-width: 40rem;
+    }
+}
+
+#menu {
+    color: black;
+    padding: 50px 100px;
+    height: 85rem;
+    background-color: rgb(224, 222, 218);
+
+    #sidebar-menu {
+        float: left;
+        font-size: 30px;
+        font-weight: 100;
+        color: black;
+        padding-left: 200px;
+
+        .active {
+            color: rgb(36, 189, 44);
+            font-size: 1.4rem;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            a {
+                width: 100px;
+                height: 30px;
+                text-align: left;
+                color: rgba(0, 0, 0, 0.6);
+                font-size: 1rem;
+    
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    #products {
+        float: right;
+        min-height: 75rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px ;
+        grid-row-gap: 20px;
+        border-left: 2px solid rgb(197, 193, 193);
+        padding: 0 5rem;
+
+        .menu-items {
+            text-align: center;
+
+            * {
+                color: black;
+            }
+
+            img {
+                box-shadow: 0px 0px 8px 1px gray;
+                border-radius: 15px;
+                width: 80%;
+            }
+        }
+    }
+}
+
+#feedback {
+    height: 600px;
+    color: black;
+    position: relative;
+
+    .comments {
+        background-color: rgb(238, 223, 202) ;
+        border-radius: 50px;
+        position: absolute;
+        float: left;
+        left: 15%;
+        top: 20%;
+        padding: 3rem;
+
+        h2, p {
+            color: black;
+        }
+
+        p {
+            font-size: larger;
+        }
+
+        img {
+            width: 20%;
+            border-radius: 50%;
+            margin-left: 2rem ;
+        }
+    }
+
+    .slideshow-container {
+        max-width: 1000px;
+        position: absolute;
+        right: 0;
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 3px 3px;
+            transition: 0.6s ease;
+            border: 0;
+            user-select: none;
+        }
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.432);
+            }
+        }
+        .prev {
+            left: 0;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.432);
+            }
+        }
+         /* The bars */
+        .feedback-bar {
+            position: absolute;
+            left: 50%;
+            top: 95%;
+            transform: translateX(-50%);
+            .bar {
+                cursor: pointer;
+                height: 2px;
+                width: 30px;
+                margin: 0 2px;
+                background-color: #ffffff;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+
+                &:hover {
+                    height: 5px;
+                    background-color: rgb(36, 189, 44);;
+                    transition: 0.6s ease;
+                }
+            }
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+    }
+}
+
+
+footer {
+    background-color: rgb(32, 32, 32);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5rem;
+
+    * {
+        color:rgb(238, 223, 202);
+    }
+
+    h2 {
+        color:rgb(255, 255, 255);
+    }
+
+    .partners {
+        text-align: center;
+
+        img {
+            width: 15%;
+            border-radius: 15px;
+            margin-left: 1.5rem;
+        }
+    }
+
+    .socialnetworks {
+        input {
+            height: 2.5rem;
+        }
+
+        input[type=submit] {
+            background-color: rgb(197,118,0);
+            border: 0;
+            padding: 0 1rem;
+            cursor: pointer;
+
+            &:active {
+                transform: translateY(1px);
+            }
+        }
+
+        .sns .fa {
+            padding: 0.5rem;
+            font-size: 30px;
+            width: 2rem;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sns {
+            margin-top: 1rem;
+
+            * {
+                margin-right: 1rem;
+            }
+        }
+    }
+}
