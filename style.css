@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500&display=swap');
+
 * {
     box-sizing: border-box;
     color:rgb(238, 223, 202);
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -118,7 +121,7 @@ header {
 #menu {
     color: black;
     padding: 50px 100px;
-    height: 80rem;
+    height: 85rem;
     background-color: rgb(224, 222, 218);
 }
 #sidebar-menu {
@@ -209,8 +212,8 @@ header {
 
 .slideshow-container {
     max-width: 1000px;
-    position: relative;
-    float: right;
+    position: absolute;
+    right: 0;
 }
 
 /* Hide the images by default */
@@ -279,7 +282,7 @@ header {
 }
 
 footer {
-    height: 200px;
+    /* height: 200px; */
     /* background-color: aqua; */
     background-color: rgb(32, 32, 32);
     display: grid;
