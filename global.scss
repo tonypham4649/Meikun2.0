@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500&display=swap');
 
-// * {
-//     box-sizing: border-box;
-//     color:rgb(238, 223, 202);
-//     font-family: 'Be Vietnam Pro', sans-serif;
-// }
-
 body {
     min-height:100%;
     font-family: sans-serif;
@@ -26,9 +20,10 @@ a, a:visited {
 
 #hero {
     min-height: 55rem;
-    background-image:  url('./imgs/wallpaper.jpg');
+    background:  url('./imgs/wallpaper.jpg') rgba(0, 0, 0, 0.4);
     background-repeat: no-repeat;
     background-size: cover;
+    background-blend-mode: multiply;
     width: 100%;
 
     header {
@@ -59,6 +54,7 @@ a, a:visited {
             }
         }
     }
+
     .page-1 {
         margin-top: 90px;
         display: flex;
@@ -98,23 +94,47 @@ a, a:visited {
     background: url('./imgs/wall-black.jpg') rgba(0, 0, 0, 0.7);
     background-size: cover;
     background-blend-mode: multiply;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    align-content: center;
     align-items: center;
-    height: 800px;
-    padding: 5rem 15rem;
+    justify-items: center;
+    padding: 5em 5em;
 
-    p {
-        color: rgb(238, 223, 202);
-        font-size: 1.5rem;
-        font-style: italic;
-        float: right;
-        width: 50%;
+    @media only screen {
+        grid-template-columns: 1fr;
+        padding: 5em 1em;
+
+        p {
+            color: rgb(238, 223, 202);
+            font-size: 1.2em;
+            font-style: italic;
+            width: 50%;
+        }
+    
+        img {
+            max-width: 80%;
+            height: auto;
+        }
     }
 
-    img {
-        text-align: center;
-        max-width: 40rem;
+    @media only screen and (min-width: 600px) {
+        img {
+            max-width: 20em;
+        }
+    }
+
+    @media only screen and (min-width: 1000px) {
+        grid-template-columns: 1fr 1fr;
+
+        img {
+            max-width: 25em;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        img {
+            max-width: 30em;
+        }
     }
 }
 
