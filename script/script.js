@@ -143,3 +143,27 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
+
+function navForSP() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "nav-bar") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav-bar";
+    }
+
+    const hero = document.getElementById("hero")
+    const y = document.getElementById("main-logo")
+    
+    if (y.parentNode == x) {
+        x.removeChild(y)
+        hero.prepend(y)
+
+    } 
+    else if (y.parentNode == hero) {
+        hero.removeChild(y)
+        x.prepend(y)
+    }
+}
+
+
