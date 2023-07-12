@@ -39,6 +39,7 @@ a, a:visited {
 }
 #hero .nav-bar .icon {
   display: none;
+  font-size: 2em;
 }
 #hero .nav-bar #main-logo {
   max-width: 50%;
@@ -56,6 +57,9 @@ a, a:visited {
   #hero .nav-bar .icon {
     float: right;
     display: block;
+  }
+  #hero .nav-bar #main-logo {
+    margin-top: 5%;
   }
 }
 @media screen and (max-width: 800px) {
@@ -77,6 +81,17 @@ a, a:visited {
   }
 }
 @media screen and (min-width: 801px) {
+  #hero .nav-bar {
+    display: flex;
+    padding-top: 2em;
+    justify-content: center;
+  }
+  #hero .nav-bar * {
+    width: 8em;
+  }
+  #hero .nav-bar #main-logo {
+    width: 13%;
+  }
   #hero .nav-bar a {
     display: block;
   }
@@ -86,16 +101,14 @@ a, a:visited {
     text-decoration-color: green;
     text-decoration-thickness: 2px;
   }
-  #hero .nav-bar .icon {
-    float: right;
-    display: block;
-  }
 }
 @media screen and (max-width: 800px) {
   #hero #main-logo {
-    position: relative;
-    width: 50%;
+    position: absolute;
+    width: 30%;
     margin-top: 5em;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 }
 
@@ -104,10 +117,10 @@ a, a:visited {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 95%;
 }
 .page-1 img {
   display: block;
+  position: relative;
   margin-top: 50px;
   width: 30%;
 }
@@ -123,6 +136,17 @@ a, a:visited {
   font-size: 20px;
   background-color: rgb(36, 189, 44);
   border: none;
+}
+@media screen and (max-width: 800px) {
+  .page-1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .page-1 img {
+    width: 80%;
+  }
 }
 
 #about {
@@ -156,7 +180,7 @@ a, a:visited {
     max-width: 20em;
   }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 800px) {
   #about {
     grid-template-columns: 1fr 1fr;
   }
@@ -164,7 +188,7 @@ a, a:visited {
     max-width: 25em;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   #about img {
     max-width: 30em;
   }
@@ -175,13 +199,56 @@ a, a:visited {
   padding: 50px 100px;
   height: 85rem;
   background-color: rgb(224, 222, 218);
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 800px) {
+  #menu {
+    flex-wrap: wrap;
+  }
 }
 #menu #sidebar-menu {
   float: left;
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 100;
   color: black;
-  padding-left: 200px;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+}
+#menu #sidebar-menu .dropbtn {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  #menu #sidebar-menu .dropbtn {
+    display: inline-block;
+    width: 20em;
+    height: 2em;
+  }
+  #menu #sidebar-menu #sidebar-menu {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  #menu #sidebar-menu .sidebar-menu-nav {
+    display: none;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  #menu #sidebar-menu .sidebar-menu-nav li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  #menu #sidebar-menu .sidebar-menu-nav li:hover {
+    background-color: #ddd;
+  }
+}
+#menu #sidebar-menu .show {
+  display: block;
 }
 #menu #sidebar-menu .active {
   color: rgb(36, 189, 44);
@@ -202,15 +269,25 @@ a, a:visited {
 #menu #sidebar-menu ul a:hover {
   cursor: pointer;
 }
-#menu #products {
-  float: right;
-  min-height: 75rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
-  grid-row-gap: 20px;
-  border-left: 2px solid rgb(197, 193, 193);
-  padding: 0 5rem;
+@media only screen and (max-width: 800px) {
+  #menu #products {
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr);
+    grid-row-gap: 5px;
+  }
+}
+@media only screen and (min-width: 801px) {
+  #menu #products {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-row-gap: 5px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #menu #products {
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    border-left: 2px solid rgb(197, 193, 193);
+  }
 }
 #menu #products .menu-items {
   text-align: center;

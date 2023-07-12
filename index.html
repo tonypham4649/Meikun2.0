@@ -40,7 +40,8 @@
 
     <section id="menu">
         <div id="sidebar-menu">
-            <ul>
+            <button onclick="navforMenu()" class="dropbtn">Menu</button>
+            <ul class="sidebar-menu-nav" id="menu-dropdown">
                 <li><a onclick="filterSelection('all')" class="filter active">Tất cả</a></li>
                 <li><a onclick="filterSelection('yogurt')" class="filter">Sữa chua</a></li>
                 <li><a onclick="filterSelection('jelly')" class="filter">Rau câu</a></li>
